@@ -1,0 +1,37 @@
+Deployment.yml
+
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sampleapp 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sampleapp
+  template:
+    metadata:
+      labels:
+        app: sampleapp 
+    spec:
+      containers:
+        - name: sampleapp 
+          image: mcr.microsoft.com/dotnet/aspnet:7.0  
+        ports:
+          - containerPort: 80
+
+
+Service.yml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: service1
+spec:
+  type: LoadBalancer
+  selector:
+    app: sample-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
