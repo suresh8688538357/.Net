@@ -1,0 +1,24 @@
+jobs:
+- job: Debug
+  steps:
+  - script: echo hello from the Debug build
+- job: Release
+  dependsOn: Debug
+  steps:
+  - script: echo hello from the Release build
+
+
+ Database: Microsoft SQL Server, Azure SQL Database, MongoDB.
+• Software Development Life Cycle Agile/Scrum.
+• Azure Data Factory (ADF) for data transfer.
+• Repos: TFS, GIT, SVN, Azure repos.
+• Used Azure Devops for CI/CD process.
+• Reporting Tools: SSRS, Power BI.
+• Unit testing: xUnit, Jest.
+• Used Azure PowerShell to create VMs (Virtual Machines).
+• Microsoft graph APIs for office integration.
+• Camstar, MES (Manufacturing Execution System) for production floor support.
+• Other tools: FORMIO, FX Cop.
+• Used Docker for deployment.
+• Experience on monitoring the performance of application using application insights.
+• Experience on creating tasks in YAML file for CI pipeline and xUnit testing frameworks integration.
